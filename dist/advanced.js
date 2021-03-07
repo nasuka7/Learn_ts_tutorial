@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b, _c;
 const quill = {
     name: "Hamabe",
     role: "frontend",
@@ -49,3 +50,11 @@ function havePet(pet) {
 havePet(new Bird());
 const input = document.getElementById("input");
 input.value = "untitti";
+const douwloadedData = {
+    id: 1
+};
+console.log((_b = (_a = douwloadedData.user) === null || _a === void 0 ? void 0 : _a.name) === null || _b === void 0 ? void 0 : _b.first);
+const userData = (_c = douwloadedData.user) !== null && _c !== void 0 ? _c : "no-user";
+function advancedFn(...args) {
+}
+advancedFn(0, "hi", true);
