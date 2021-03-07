@@ -31,7 +31,6 @@ function toUpperCase(x: string | number): string | number {
 
 const upperHello = toUpperCase(22);
 
-
 type NomadWorker = Engineer | Blogger;
 
 function describeProfile(nomadWorker: NomadWorker) {
@@ -83,4 +82,17 @@ interface DownloadedData {
     }
   }
 }
+
+const douwloadedData: DownloadedData = {
+  id:1
+}
+console.log(douwloadedData.user?.name?.first);
+
+const userData = douwloadedData.user ?? "no-user";
+type id = DownloadedData["id"]
+
+function advancedFn(...args: [number, string, boolean?, ...number[]]) {
+}
+
+advancedFn(0, "hi", true);
 
