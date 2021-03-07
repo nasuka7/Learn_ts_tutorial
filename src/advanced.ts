@@ -20,12 +20,17 @@ type NumberBoolean = number | boolean;
 type StirngNumber = string | number;
 type Mix = NumberBoolean & StirngNumber;
 
-function toUpperCase(x: string | number) {
+function toUpperCase(x: string): string; 
+function toUpperCase(x: number): number; 
+function toUpperCase(x: string | number): string | number {
   if (typeof x === "string") {
     return x.toUpperCase();
   }
-  return "";
+  return x;
 }
+
+const upperHello = toUpperCase(22);
+
 
 type NomadWorker = Engineer | Blogger;
 
@@ -68,3 +73,14 @@ havePet(new Bird());
 
 const input = document.getElementById("input") as HTMLInputElement;
 input.value = "untitti";
+
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  }
+}
+

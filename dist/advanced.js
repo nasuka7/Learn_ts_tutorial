@@ -8,8 +8,9 @@ function toUpperCase(x) {
     if (typeof x === "string") {
         return x.toUpperCase();
     }
-    return "";
+    return x;
 }
+const upperHello = toUpperCase(22);
 function describeProfile(nomadWorker) {
     console.log(nomadWorker.name);
     if ("role" in nomadWorker) {
